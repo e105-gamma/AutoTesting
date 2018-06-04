@@ -3,7 +3,8 @@
 <suite name="Tests" verbose="5">
     <test name="Test1">
         <classes>
-            <class name="com.spbstu.org.epamTest"/>
+            <class name="com.spbstu.org.homework1.HomeWork1"/>
+            <class name="com.spbstu.org.homework2.HomeWork2"/>
         </classes>
     </test>
 </suite>

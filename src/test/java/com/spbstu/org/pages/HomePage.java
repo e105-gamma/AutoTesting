@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 /** Sample page */
-public class HomePage extends Page {
+class HomePage extends Page {
 
   @FindBy(how = How.TAG_NAME, using = "h1")
   @CacheLookup

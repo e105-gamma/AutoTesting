@@ -9,7 +9,7 @@ import java.util.List;
 
 public class TestPage {
 
-    public WebDriver driver;
+    public final WebDriver driver;
 
     @FindBy(css = "form .btn-login")
     WebElement loginButton;

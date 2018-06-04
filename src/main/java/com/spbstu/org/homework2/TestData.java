@@ -3,9 +3,10 @@ package com.spbstu.org.homework2;
 import java.util.Arrays;
 import java.util.List;
 
-public final class TestData {
+final class TestData {
 
-    public static final String TARGET_URL = "https://jdi-framework.github.io/tests/index.htm";
+
+    //public static final String TARGET_URL = "https://jdi-framework.github.io/tests/index.htm";
     public static final String WEBSITE_TITLE = "Index Page";
     public static final String LOGIN = "epam";
     public static final String PASSWORD = "1234";

@@ -6,9 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.util.List;
 
 /*
@@ -25,22 +27,31 @@ public class HomeWork1 {
 
 
 
-    WebDriver driver;
+    private WebDriver driver;
 
     @BeforeMethod
     public void testInit() {
         // TODO this should be specify in pom.xml
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        //Done!
+        //System.setProperty("webdriver.chrome.driver", "chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         driver = new ChromeDriver(options);
+
+    }
+
+
+    @AfterSuite
+    public void afterSuite() {
+        driver.close();
     }
 
     @Test
     public void testHomePage() {
 
         // go to URL
-        driver.navigate().to(TestData.TARGET_URL);
+
+        driver.navigate().to(System.getProperty("homePage"));
         // test title
         Assert.assertEquals(TestData.WEBSITE_TITLE, driver.getTitle(), "Title doesn't match.");
 
@@ -63,25 +74,25 @@ public class HomeWork1 {
             imagesList.size(),
             TestData.NUMBER_OF_IMAGES,
             "The number of images does not match the target.");
+
         // TODO read IDEA warning, please
         imagesList.forEach(
             imgIterator ->
                 Assert.assertEquals(
                     imgIterator.isDisplayed(), true, imgIterator.getAttribute("className")));
 
+
+
+
+
+
         // test 4 texts
         List<WebElement> texts = driver.findElements(By.cssSelector(".benefit-txt"));
-        Assert.assertEquals(
-            texts.size(),
-            TestData.NUMBER_OF_TEXTS,
-            // TODO read IDEA warning, please
-            String.format(
-                "The number of texts does not match the target.",
-                texts.size(),
-                TestData.NUMBER_OF_TEXTS));
+        Assert.assertEquals(texts.size(), TestData.NUMBER_OF_TEXTS, "The number of texts does not match the target.");
+
         texts.forEach(
-            textIterator -> // TODO this is not an Iterator, actually
-                Assert.assertTrue(TestData.BENEFITS_TEXTS.contains(textIterator.getText())));
+                benefitText ->
+                    Assert.assertTrue(TestData.BENEFITS_TEXTS.contains(benefitText.getText())));
 
         // test main header
         WebElement mainHeaderText = driver.findElement(By.cssSelector(".main-title"));
