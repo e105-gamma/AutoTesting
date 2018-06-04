@@ -19,6 +19,7 @@ import java.util.List;
 
 */
 
+// TODO format your code, please
 public class HomeWork1 {
 
 
@@ -28,7 +29,7 @@ public class HomeWork1 {
 
     @BeforeMethod
     public void testInit() {
-
+        // TODO this should be specify in pom.xml
         System.setProperty("webdriver.chrome.driver", "chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
@@ -62,6 +63,7 @@ public class HomeWork1 {
             imagesList.size(),
             TestData.NUMBER_OF_IMAGES,
             "The number of images does not match the target.");
+        // TODO read IDEA warning, please
         imagesList.forEach(
             imgIterator ->
                 Assert.assertEquals(
@@ -72,12 +74,13 @@ public class HomeWork1 {
         Assert.assertEquals(
             texts.size(),
             TestData.NUMBER_OF_TEXTS,
+            // TODO read IDEA warning, please
             String.format(
                 "The number of texts does not match the target.",
                 texts.size(),
                 TestData.NUMBER_OF_TEXTS));
         texts.forEach(
-            textIterator ->
+            textIterator -> // TODO this is not an Iterator, actually
                 Assert.assertTrue(TestData.BENEFITS_TEXTS.contains(textIterator.getText())));
 
         // test main header
