@@ -1,6 +1,3 @@
 package com.spbstu.org;
 
-public class epamTest {
-
-
-}
+public class epamTest {}
