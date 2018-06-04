@@ -5,6 +5,7 @@ import java.util.List;
 
 public final class TestData {
 
+    // TODO this should be specify in po.xml
     public static final String TARGET_URL = "https://jdi-framework.github.io/tests/index.htm";
     public static final String WEBSITE_TITLE = "Index Page";
     public static final String LOGIN = "epam";

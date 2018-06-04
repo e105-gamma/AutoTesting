@@ -26,7 +26,7 @@ public class HomeWork2 {
   }
 
 
-
+    // TODO browser should be closed after all
     @Test
     public void testHomePage() {
 
@@ -55,14 +55,17 @@ public class HomeWork2 {
         // test 4 texts
         List<String> benefitsList = testPage.getBenefitTexts();
 
+        // TODO read IDEA warning, please
         Assert.assertEquals(
             benefitsList.size(),
             TestData.NUMBER_OF_TEXTS,
+            // TODO #1
             String.format(
                 "The number of texts does not match the target.",
                 benefitsList.size(),
                 TestData.NUMBER_OF_TEXTS));
         benefitsList.forEach(
+                // TODO #2
             textIterator ->
                 Assert.assertTrue(TestData.BENEFITS_TEXTS.contains(textIterator.toString())));
 
