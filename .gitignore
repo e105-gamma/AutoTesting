@@ -4,3 +4,11 @@
 target/
 
 testLab1\.iml
+
+allure-results/
+
+testng \(копия\)\.xml
+
+\.logs/
+
+build/

@@ -9,6 +9,9 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+
+
+
 import java.util.List;
 
 public class HomeWork2 {
@@ -21,7 +24,7 @@ public class HomeWork2 {
 
        // System.setProperty("webdriver.chrome.driver", "chromedriver");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
+        //options.addArguments("--start-maximized");
         driver = new ChromeDriver(options);
         testPage = PageFactory.initElements(driver, TestPage.class);
   }

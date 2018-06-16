@@ -56,7 +56,7 @@ public class TestPage {
     }
 
     public List<String> getBenefitTexts() {
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         for (WebElement benefitText : benefitTexts) list.add(benefitText.getText());
         return list;
     }
