@@ -49,7 +49,7 @@ public class HomeWork3 {
 
         diffPage.selectDropdown(DifferentElementsData.DROPDOWN_MENU_ELEMENT_4);
 
-        //TODO: переделать тестЛОГ, а то подозрительна!!!
+
         diffPage.testRadioInLog(DifferentElementsData.RADIOBUTTON_4);
         diffPage.testDropdownInLog(DifferentElementsData.DROPDOWN_MENU_ELEMENT_4);
         diffPage.testCheckboxInLog(DifferentElementsData.CHECKBOX_1, Boolean.TRUE);

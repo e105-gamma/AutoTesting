@@ -5,7 +5,7 @@ import com.epam.jdi.uitests.web.selenium.elements.composite.WebPage;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JFindBy;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JPage;
 import com.spbstu.org.homework5.forms.LoginForm;
-import com.spbstu.org.homework5.forms.UserStruct;
+import com.spbstu.org.homework5.utils.UserStruct;
 
 //import static com.spbstu.org.homework5.pages.HomePage;
 //import static com.spbstu.org.homework5.pages.metalsAndColorsPage;

@@ -1,4 +1,4 @@
-package com.spbstu.org.homework5.forms;
+package com.spbstu.org.homework5.utils;
 
 public class UserStruct {
     public String username;

@@ -3,11 +3,10 @@ package com.spbstu.org.homework5;
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebSite;
 import com.epam.jdi.uitests.web.testng.testRunner.TestNGBase;
 
-import com.epam.jdi.uitests.web.selenium.elements.composite.WebSite;
 import com.spbstu.org.homework5.dataProvider.DataSet;
 import com.spbstu.org.homework5.dataProvider.Provider;
-import com.spbstu.org.homework5.forms.UserStruct;
-import com.spbstu.org.homework5.testData.HomePageData;
+import com.spbstu.org.homework5.utils.Users;
+
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -25,7 +24,7 @@ public class HomeWork5 extends TestNGBase {
         WebSite.init(epamSite.class);
         driverFactory.getDriver();
         WebSite.open();
-        homePage.login(new UserStruct(HomePageData.LOGIN, HomePageData.PASSWORD));
+        homePage.login(Users.EPAM);
         homePage.openMetalsAndColorsPage();
         metalsAndColorsPage.vegetables.select("Salad");
     }

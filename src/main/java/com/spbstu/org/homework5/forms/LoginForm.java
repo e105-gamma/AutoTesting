@@ -4,6 +4,7 @@ import com.epam.jdi.uitests.web.selenium.elements.common.Button;
 import com.epam.jdi.uitests.web.selenium.elements.common.TextField;
 import com.epam.jdi.uitests.web.selenium.elements.composite.Form;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JFindBy;
+import com.spbstu.org.homework5.utils.UserStruct;
 
 public class LoginForm extends Form<UserStruct> {
     @JFindBy(css = "form .btn-login")
